@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO -->
+    <title>Idriss Khattabi | Portfolio, Links & Contact</title>
+    <meta
+      name="description"
+      content="Explore Idriss Khattabi's portfolio, GitHub, LinkedIn, Telegram, WhatsApp, email, and contact links in one place."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="author" content="Idriss Khattabi" />
+    <meta name="theme-color" content="#8b5cf6" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Canonical -->
+    <link
+      id="canonicalLink"
+      rel="canonical"
+      href="https://yourusername.github.io/"
+    />
+
+    <!-- Optional favicon -->
+    <link rel="icon" href="imgs/favicon.png" type="image/png" />
+
+    <!-- Performance -->
+    <!-- Keep this synced with your first hero image -->
+    <link
+      rel="preload"
+      as="image"
+      href="imgs/main_imag.png"
+      fetchpriority="high"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Idriss Khattabi" />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      property="og:title"
+      content="Idriss Khattabi | Portfolio, Links & Contact"
+    />
+    <meta
+      property="og:description"
+      content="Explore Idriss Khattabi's portfolio, GitHub, LinkedIn, Telegram, WhatsApp, email, and contact links in one place."
+    />
+    <meta property="og:url" content="https://yourusername.github.io/" />
+    <meta
+      property="og:image"
+      content="https://yourusername.github.io/imgs/main_imag.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="Portrait of Idriss Khattabi on a personal links page."
+    />
+
+    <!-- Twitter / X cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Idriss Khattabi | Portfolio, Links & Contact"
+    />
+    <meta
+      name="twitter:description"
+      content="Explore Idriss Khattabi's portfolio, GitHub, LinkedIn, Telegram, WhatsApp, email, and contact links in one place."
+    />
+    <meta
+      name="twitter:image"
+      content="https://yourusername.github.io/imgs/main_imag.png"
+    />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" id="structuredData">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://yourusername.github.io/#website",
+            "url": "https://yourusername.github.io/",
+            "name": "Idriss Khattabi",
+            "description": "Explore Idriss Khattabi's portfolio, GitHub, LinkedIn, Telegram, WhatsApp, email, and contact links in one place.",
+            "inLanguage": "en"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://yourusername.github.io/#person",
+            "name": "Idriss Khattabi",
+            "url": "https://yourusername.github.io/",
+            "image": "https://yourusername.github.io/imgs/main_imag.png",
+            "description": "Developer, creator, and builder.",
+            "sameAs": [
+              "https://github.com/yourusername",
+              "https://www.linkedin.com/in/yourusername",
+              "https://t.me/yourusername"
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --accent: #8b5cf6;
+        --accent-rgb: 139, 92, 246;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+      body {
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        color: white;
+        background:
+          radial-gradient(circle at 15% 20%, rgba(var(--accent-rgb), 0.22), transparent 30%),
+          radial-gradient(circle at 85% 80%, rgba(34, 211, 238, 0.10), transparent 30%),
+          linear-gradient(180deg, #05060a 0%, #09090f 45%, #050507 100%);
+        transition: background 1.2s ease;
+      }
+
+      .ambient-layer {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: -2;
+      }
+
+      .ambient {
+        position: absolute;
+        border-radius: 9999px;
+        filter: blur(100px);
+        opacity: 0.28;
+        transition: background 1.2s ease;
+      }
+
+      .ambient-1 {
+        width: 18rem;
+        height: 18rem;
+        top: -5rem;
+        left: -5rem;
+        background: rgba(var(--accent-rgb), 0.45);
+      }
+
+      .ambient-2 {
+        width: 20rem;
+        height: 20rem;
+        right: -5rem;
+        bottom: -5rem;
+        background: rgba(34, 211, 238, 0.2);
+      }
+
+      .hero-backdrop {
+        position: absolute;
+        inset: -8%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transform: scale(1.08);
+        filter: blur(24px) saturate(1.15) brightness(0.7);
+        transition:
+          opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 1.6s cubic-bezier(0.22, 1, 0.36, 1),
+          filter 1.2s ease;
+      }
+
+      .hero-backdrop.is-active {
+        opacity: 0.78;
+        transform: scale(1);
+        filter: blur(20px) saturate(1.2) brightness(0.72);
+      }
+
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(
+            to bottom,
+            rgba(5, 6, 10, 0.40) 0%,
+            rgba(6, 7, 10, 0.22) 35%,
+            rgba(7, 8, 12, 0.58) 100%
+          ),
+          radial-gradient(
+            circle at center,
+            transparent 15%,
+            rgba(7, 8, 12, 0.18) 58%,
+            rgba(7, 8, 12, 0.58) 100%
+          );
+      }
+
+      .hero-vignette {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.28) 100%);
+      }
+
+      .hero-image-stack {
+        width: min(92vw, 34rem);
+        aspect-ratio: 1 / 1;
+      }
+
+      .hero-image-shell {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 2rem;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.14),
+          rgba(255, 255, 255, 0.04)
+        );
+        backdrop-filter: blur(14px) saturate(150%);
+        -webkit-backdrop-filter: blur(14px) saturate(150%);
+        box-shadow:
+          0 24px 80px rgba(0, 0, 0, 0.38),
+          0 0 80px rgba(var(--accent-rgb), 0.16);
+        transition: box-shadow 1.2s ease;
+      }
+
+      .hero-image-shell::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+          radial-gradient(circle at 50% 35%, transparent 48%, rgba(5, 8, 12, 0.12) 78%, rgba(5, 8, 12, 0.28) 100%),
+          linear-gradient(to bottom, rgba(255,255,255,0.04), rgba(255,255,255,0));
+      }
+
+      .hero-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transform: scale(1.04);
+        transition:
+          opacity 1.05s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 1.3s cubic-bezier(0.22, 1, 0.36, 1);
+        filter: saturate(1.04) contrast(1.03);
+        -webkit-mask-image: radial-gradient(circle at center, black 66%, transparent 100%);
+        mask-image: radial-gradient(circle at center, black 66%, transparent 100%);
+      }
+
+      .hero-image.is-active {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .scroll-indicator {
+        animation: soft-bounce 1.8s infinite;
+      }
+
+      @keyframes soft-bounce {
+        0%,
+        100% {
+          transform: translate(-50%, 0);
+          opacity: 0.82;
+        }
+        50% {
+          transform: translate(-50%, -8px);
+          opacity: 1;
+        }
+      }
+
+      .wheel-dot {
+        animation: wheel 1.5s infinite;
+      }
+
+      @keyframes wheel {
+        0% {
+          transform: translateY(0);
+          opacity: 0;
+        }
+        25% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(16px);
+          opacity: 0;
+        }
+      }
+
+      .grid-bg {
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+        background-size: 28px 28px;
+        mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+        -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+      }
+
+      .link-card {
+        opacity: 0;
+        transform: translateY(44px) scale(0.965);
+        filter: blur(14px);
+        transition:
+          opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 1.05s cubic-bezier(0.22, 1, 0.36, 1),
+          filter 0.95s ease,
+          box-shadow 0.35s ease;
+      }
+
+      .link-card.is-visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+      }
+
+      .link-card-inner {
+        height: 100%;
+        border-radius: 1.65rem;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.12),
+          rgba(255, 255, 255, 0.05)
+        );
+        backdrop-filter: blur(18px) saturate(160%);
+        -webkit-backdrop-filter: blur(18px) saturate(160%);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.08),
+          0 20px 40px rgba(0, 0, 0, 0.18);
+        transition:
+          transform 0.3s ease,
+          background 0.3s ease,
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .link-card:hover .link-card-inner {
+        transform: translateY(-4px);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.15),
+          rgba(255, 255, 255, 0.06)
+        );
+        border-color: rgba(255, 255, 255, 0.18);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.1),
+          0 22px 48px rgba(0, 0, 0, 0.24);
+      }
+
+      .link-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.35rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .profile-block {
+        opacity: 0;
+        transform: translateY(24px);
+        animation: intro-fade 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        animation-delay: 0.15s;
+      }
+
+      @keyframes intro-fade {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .skip-link {
+        position: absolute;
+        left: 1rem;
+        top: -4rem;
+        z-index: 50;
+        padding: 0.75rem 1rem;
+        border-radius: 0.75rem;
+        background: rgba(17, 24, 39, 0.95);
+        color: white;
+        transition: top 0.2s ease;
+      }
+
+      .skip-link:focus {
+        top: 1rem;
+      }
+
+      @media (min-width: 640px) {
+        .ambient-1 {
+          width: 22rem;
+          height: 22rem;
+        }
+
+        .ambient-2 {
+          width: 24rem;
+          height: 24rem;
+        }
+
+        .hero-image-stack {
+          width: min(76vw, 38rem);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .hero-image-stack {
+          width: min(62vw, 42rem);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .hero-backdrop,
+        .hero-image,
+        .link-card,
+        .link-card-inner,
+        .scroll-indicator,
+        .wheel-dot,
+        .profile-block {
+          transition: none !important;
+          animation: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#linksSection" class="skip-link">Skip to links</a>
+
+    <div class="ambient-layer" aria-hidden="true">
+      <div class="ambient ambient-1"></div>
+      <div class="ambient ambient-2"></div>
+    </div>
+
+    <main>
+      <!-- HERO -->
+      <section id="hero" class="relative min-h-screen overflow-hidden" aria-label="Hero">
+        <div class="absolute inset-0" aria-hidden="true">
+          <div id="heroBackdropA" class="hero-backdrop is-active"></div>
+          <div id="heroBackdropB" class="hero-backdrop"></div>
+          <div class="hero-overlay"></div>
+          <div class="hero-vignette"></div>
+        </div>
+
+        <div class="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 py-8 sm:px-6">
+          <div class="hero-image-stack">
+            <div class="hero-image-shell">
+              <img
+                id="heroImageA"
+                src=""
+                alt="Portrait of Idriss Khattabi"
+                class="hero-image is-active"
+              />
+              <img
+                id="heroImageB"
+                src="imgs/img1.jpg"
+                alt="Portrait of Idriss Khattabi"
+                class="hero-image"
+              />
+            </div>
+          </div>
+
+          <button
+            id="scrollCue"
+            aria-label="Scroll to links"
+            class="scroll-indicator absolute bottom-6 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-white/80"
+          >
+            <span class="text-[10px] uppercase tracking-[0.35em] sm:text-[11px]">Scroll</span>
+            <span class="flex h-12 w-7 justify-center rounded-full border border-white/30 p-1">
+              <span class="wheel-dot h-3 w-1 rounded-full bg-white"></span>
+            </span>
+            <i class="fa-solid fa-angle-down text-base sm:text-lg"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- LINKS -->
+      <section
+        id="linksSection"
+        class="relative px-4 pb-16 pt-20 sm:px-6 sm:pb-20 sm:pt-24"
+        aria-labelledby="profileName"
+      >
+        <div class="grid-bg absolute inset-0 opacity-40" aria-hidden="true"></div>
+
+        <div class="relative mx-auto max-w-5xl">
+          <header class="profile-block mx-auto mb-10 max-w-2xl text-center sm:mb-12">
+            <h1
+              id="profileName"
+              class="text-2xl font-black tracking-tight sm:text-4xl md:text-5xl"
+            >
+              Idriss Khattabi
+            </h1>
+            <p
+              id="profileDescription"
+              class="mt-4 text-sm leading-7 text-white/70 sm:text-base"
+            >
+              Your short description goes here.
+            </p>
+          </header>
+
+          <nav aria-label="Social links and contact methods">
+            <div
+              id="linksGrid"
+              class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+            ></div>
+          </nav>
+        </div>
+      </section>
+    </main>
+
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
