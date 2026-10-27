@@ -44,14 +44,14 @@ const links = [
   },
   {
     label: "WhatsApp",
-    url: "https://wa.me/21235245797",
+    url: "https://wa.me/212635245797",
     text: "Chat with me",
     icon: "fa-brands fa-whatsapp",
     color: "#25D366",
   },
   {
     label: "Phone",
-    url: "tel:+21235245797",
+    url: "tel:+212635245797",
     text: "+212 6 35 24 57 97",
     icon: "fa-solid fa-phone",
     color: "#10b981",
